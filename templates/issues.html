@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted Issues</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-6 text-center">Submitted Issues</h1>
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse border border-gray-200">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 px-4 py-2">ID</th>
+                        <th class="border border-gray-300 px-4 py-2">Username</th>
+                        <th class="border border-gray-300 px-4 py-2">Description</th>
+                        <th class="border border-gray-300 px-4 py-2">Duration</th>
+                        <th class="border border-gray-300 px-4 py-2">Issue Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for issue in issues %}
+                    <tr class="text-center">
+                        <td class="border border-gray-300 px-4 py-2">{{ issue[0] }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ issue[1] }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ issue[2] }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ issue[3] }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ issue[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
